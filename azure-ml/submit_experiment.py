@@ -14,7 +14,7 @@ def submit():
     target.wait_for_completion(show_output=True)
 
     # create an environment using an existing conda file
-    env = Environment.from_conda_specification(name="europython-env", file_path="../env.yml")
+    env = Environment.from_conda_specification(name="europython-env", file_path="env.yml")
 
     # create script run configuration
     src = ScriptRunConfig(source_directory=".", script="train.py",
@@ -23,7 +23,7 @@ def submit():
     src.run_config.target = target
 
     # create an experiment
-    experiment_name = "europython-exp"
+    experiment_name = "Default"
     experiment = Experiment(workspace=ws, name=experiment_name)
 
     # run experiment
