@@ -5,6 +5,8 @@ This notebook uses machine learning algorithms to get the best accuracy of predi
 ## Setup
 
 - Install [Anaconda](https://www.anaconda.com/)
+- Set the channel priority to strict to avoid issues with the environment creation taking forever.
+  - `conda config --set channel_priority strict`
 - Run the following commands (in either the terminal or an Anaconda Prompt):
   - `conda env create -f golden_scenario_env.yml`
   - `conda activate golden_scenario_env`
