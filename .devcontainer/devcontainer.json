@@ -32,5 +32,5 @@
   },
   "onCreateCommand": "conda env create -f environment.yml",
   "updateContentCommand": "conda init",
-  "postStartCommand": "/opt/conda/envs/golden_scenario_env/bin/jupyter lab --notebook-dir=/workspaces/data-science --ip='0.0.0.0' --port=8888 --no-browser"
+  "postCreateCommand": "/opt/conda/envs/golden_scenario_env/bin/jupyter lab --notebook-dir=/workspaces/data-science --ip='0.0.0.0' --port=8888 --no-browser"
 }
