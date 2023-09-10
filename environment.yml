@@ -14,3 +14,5 @@ dependencies:
   - ydata-profiling==4.5.1
   # pin typeguard to 2.13.3 to avoid a runtime issue with ydata-profiling
   - typeguard==2.13.3
+  # auto register conda environments as ipython kernels in jupyter
+  - nb_conda_kernels==2.3.1
