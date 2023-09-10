@@ -1,4 +1,6 @@
 .DS_Store
+.idea/
 .ipynb_checkpoints/
+log/
 .venv/
-
+venv/

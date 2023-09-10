@@ -1,0 +1,25 @@
+{
+  "name": "data-science",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [
+    6006,
+    8888
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/golden_scenario_env"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "updateContentCommand": "conda init",
+  "postStartCommand": "/opt/conda/envs/golden_scenario_env/bin/jupyter notebook --ip='0.0.0.0' --port=8888 --no-browser"
+}
