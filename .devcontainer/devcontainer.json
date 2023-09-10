@@ -6,6 +6,12 @@
     8888
   ],
   "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "Titanic.ipynb"
+      ]
+    },
     "vscode": {
       "settings": {
         "python.defaultInterpreterPath": "/opt/conda/envs/golden_scenario_env"
