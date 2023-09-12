@@ -30,7 +30,8 @@
   "remoteEnv": {
     "ENABLE_ORYX_BUILD": "false"
   },
-  "onCreateCommand": "conda env create -f environment.yml",
-  "updateContentCommand": "conda init",
-  "postCreateCommand": "/opt/conda/envs/golden_scenario_env/bin/jupyter lab --notebook-dir=/workspaces/data-science --ip='0.0.0.0' --port=8888 --no-browser"
+  // There is not a feature for LaTeX in VS Code yet, so we need to install it manually
+  "onCreateCommand": "sudo apt-get update && sudo apt install -y texlive-xetex pandoc && conda env create -f environment.yml",
+  "updateContentCommand": "conda init"
+  // "postCreateCommand": "/opt/conda/envs/golden_scenario_env/bin/jupyter lab --notebook-dir=/workspaces/data-science --ip='0.0.0.0' --port=8888 --no-browser"
 }
