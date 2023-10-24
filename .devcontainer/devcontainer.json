@@ -1,0 +1,37 @@
+{
+  "name": "data-science",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "hostRequirements": {
+    "memory": "32gb"
+  },
+  "forwardPorts": [
+    6006,
+    8888
+  ],
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "Titanic.ipynb"
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "editor.minimap.enabled" : false,
+        "python.defaultInterpreterPath": "/opt/conda/envs/golden_scenario_env",
+        "workbench.editorLargeFileConfirmation": 1024
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "ENABLE_ORYX_BUILD": "false"
+  },
+  // There is not a feature for LaTeX in VS Code yet, so we need to install it manually
+  "onCreateCommand": "sudo apt-get update && sudo apt install -y texlive-xetex pandoc && conda env create -f environment.yml",
+  "updateContentCommand": "conda init"
+  // "postCreateCommand": "/opt/conda/envs/golden_scenario_env/bin/jupyter lab --notebook-dir=/workspaces/data-science --ip='0.0.0.0' --port=8888 --no-browser"
+}
